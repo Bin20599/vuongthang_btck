@@ -1,0 +1,20 @@
+print("=== CHƯƠNG TRÌNH TÌM PHẦN TỬ CHUNG GIỮA HAI DANH SÁCH ===")
+input_list1 = input("Nhập danh sách số nguyên thứ nhất (các số cách nhau bởi dấu cách): ")
+input_list2 = input("Nhập danh sách số nguyên thứ hai (các số cách nhau bởi dấu cách): ")
+list1 = list(map(int, input_list1.split()))
+list2 = list(map(int, input_list2.split()))
+print("\nDanh sách 1:", list1)
+print("Danh sách 2:", list2)
+set1 = set(list1)
+set2 = set(list2)
+print("\nTập hợp 1 (loại bỏ trùng lặp):", set1)
+print("Tập hợp 2 (loại bỏ trùng lặp):", set2)
+common = set1.intersection(set2)  
+print("\n=== KẾT QUẢ ===")
+if common:
+    common_sorted = sorted(list(common))
+    print("Các phần tử xuất hiện trong cả hai danh sách là:", common_sorted)
+else:
+    print("Không có phần tử chung nào giữa hai danh sách.")
+
+print("\n=== KẾT THÚC CHƯƠNG TRÌNH ===")
