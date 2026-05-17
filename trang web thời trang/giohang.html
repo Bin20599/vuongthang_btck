@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Giỏ Hàng</title>
+    <link rel="stylesheet" href="giohang.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            FASHION
+        </div>
+
+        <!-- SIDEBAR -->
+
+<div class="sidebar">
+
+    <a href="index.html">
+        <i class="fa-solid fa-house"></i>
+        <span>Trang chủ</span>
+    </a>
+
+    <a href="nam.html">
+        <i class="fa-solid fa-person"></i>
+        <span>Thời trang nam</span>
+    </a>
+
+    <a href="nu.html">
+        <i class="fa-solid fa-person-dress"></i>
+        <span>Thời trang nữ</span>
+    </a>
+
+    <a href="luxury.html">
+        <i class="fa-solid fa-crown"></i>
+        <span>Luxury</span>
+    </a>
+
+    <a href="lienhe.html">
+        <i class="fa-solid fa-phone"></i>
+        <span>Liên hệ</span>
+    </a>
+
+</div>
+
+<!-- CART -->
+
+<a href="giohang.html" class="cart-box">
+
+    <i class="fa-solid fa-cart-shopping"></i>
+
+    <span>3</span>
+
+</a>
+
+    </header>
+
+    <!-- BANNER -->
+
+    <section class="banner">
+
+        <h1>GIỎ HÀNG</h1>
+
+        <p>
+            Quản lý sản phẩm thời trang của bạn
+        </p>
+
+    </section>
+
+    <!-- TITLE -->
+
+    <h2 class="title">
+        SẢN PHẨM ĐÃ CHỌN
+    </h2>
+
+    <!-- CART -->
+
+    <section class="cart" id="cartContainer">
+
+    </section>
+
+    <!-- TOTAL -->
+
+    <div class="total-box">
+
+        <h2 id="totalPrice">
+            Tổng tiền: 0 VNĐ
+        </h2>
+
+        <button class="checkout-btn">
+            Thanh toán ngay
+        </button>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 Fashion Showroom | Hotline: 0123 456 789
+
+    </footer>
+
+    <script>
+
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        const cartContainer =
+        document.getElementById("cartContainer");
+
+        const totalPrice =
+        document.getElementById("totalPrice");
+
+        function renderCart(){
+
+            cartContainer.innerHTML = "";
+
+            let total = 0;
+
+            if(cart.length === 0){
+
+                cartContainer.innerHTML = `
+
+                <div class="empty-cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p>Giỏ hàng của bạn đang trống</p>
+                </div>
+
+                `;
+
+                totalPrice.innerHTML =
+                "Tổng tiền: 0 VNĐ";
+
+                return;
+            }
+
+            cart.forEach((item,index)=>{
+
+                total += item.price * item.quantity;
+
+                cartContainer.innerHTML += `
+
+                <div class="cart-item">
+
+                    <img src="${item.image}">
+
+                    <div class="cart-info">
+
+                        <h2>${item.name}</h2>
+
+                        <div class="price">
+                            ${item.price.toLocaleString()} VNĐ
+                        </div>
+
+                        <div class="quantity">
+
+                            <button onclick="decrease(${index})">
+                                -
+                            </button>
+
+                            <span>
+                                ${item.quantity}
+                            </span>
+
+                            <button onclick="increase(${index})">
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <button class="remove-btn"
+                    onclick="removeItem(${index})">
+
+                        Xóa
+
+                    </button>
+
+                </div>
+
+                `;
+            });
+
+            totalPrice.innerHTML =
+            "Tổng tiền: " +
+            total.toLocaleString() +
+            " VNĐ";
+
+            localStorage.setItem(
+                "cart",
+                JSON.stringify(cart)
+            );
+        }
+
+        function increase(index){
+
+            cart[index].quantity++;
+
+            renderCart();
+        }
+
+        function decrease(index){
+
+            if(cart[index].quantity > 1){
+
+                cart[index].quantity--;
+
+            }
+
+            renderCart();
+        }
+
+        function removeItem(index){
+
+            cart.splice(index,1);
+
+            renderCart();
+        }
+
+        renderCart();
+
+    </script>
+
+</body>
+</html>

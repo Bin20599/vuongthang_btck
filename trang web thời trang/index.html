@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Fashion Showroom</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar">
+
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+            <span>Trang chủ</span>
+        </a>
+
+        <a href="nam.html">
+            <i class="fa-solid fa-person"></i>
+            <span>Thời trang nam</span>
+        </a>
+
+        <a href="nu.html">
+            <i class="fa-solid fa-person-dress"></i>
+            <span>Thời trang nữ</span>
+        </a>
+
+        <a href="luxury.html">
+            <i class="fa-solid fa-crown"></i>
+            <span>Luxury</span>
+        </a>
+
+        <a href="lienhe.html">
+            <i class="fa-solid fa-phone"></i>
+            <span>Liên hệ</span>
+        </a>
+
+    </div>
+    <!-- CHAT BOT -->
+
+<div class="chat-toggle" onclick="openChat()">
+    <i class="fa-solid fa-comments"></i>
+</div>
+
+<div class="chat-box" id="chatBox">
+
+    <div class="chat-header">
+
+        <h3>Fashion Support</h3>
+
+        <i class="fa-solid fa-xmark" onclick="closeChat()"></i>
+
+    </div>
+
+    <div class="chat-body" id="chatBody">
+
+        <div class="bot-message">
+            Xin chào 👋<br>
+            Tôi có thể tư vấn thời trang cho bạn.
+        </div>
+
+    </div>
+
+    <div class="chat-footer">
+
+        <input type="text"
+        id="userInput"
+        placeholder="Nhập tin nhắn...">
+
+        <button onclick="sendMessage()">
+            Gửi
+        </button>
+
+    </div>
+
+</div>
+    <!-- CART -->
+
+    <a href="giohang.html" class="cart-box">
+
+        <i class="fa-solid fa-cart-shopping"></i>
+
+        <span>3</span>
+
+    </a>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            FASHION
+        </div>
+
+
+    </header>
+
+    <!-- BANNER -->
+
+    <section class="banner">
+
+        <h1>SHOWROOM THỜI TRANG</h1>
+
+        <p>Đẳng cấp - Sang trọng - Hiện đại</p>
+
+        <button>Khám phá ngay</button>
+
+    </section>
+
+    <!-- PRODUCTS -->
+
+    <h2 class="title">SẢN PHẨM NỔI BẬT</h2>
+
+    <section class="products">
+
+        <!-- CARD 1 -->
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=800">
+
+            <div class="icons">
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-eye"></i>
+            </div>
+
+            <div class="card-content">
+
+                <h3>Áo Hoodie Luxury</h3>
+
+                <div class="price">
+                    850.000 VNĐ
+                </div>
+
+                <p>
+                    Thiết kế trẻ trung, chất liệu cao cấp,
+                    phù hợp phong cách hiện đại.
+                </p>
+
+                <button class="btn">
+                    Mua ngay
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- CARD 2 -->
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=800">
+
+            <div class="icons">
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-eye"></i>
+            </div>
+
+            <div class="card-content">
+
+                <h3>Đầm Dạ Hội</h3>
+
+                <div class="price">
+                    1.250.000 VNĐ
+                </div>
+
+                <p>
+                    Phong cách quý phái, nổi bật trong mọi sự kiện.
+                </p>
+
+                <button class="btn">
+                    Mua ngay
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- CARD 3 -->
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800">
+
+            <div class="icons">
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-eye"></i>
+            </div>
+
+            <div class="card-content">
+
+                <h3>Giày Sneaker</h3>
+
+                <div class="price">
+                    2.100.000 VNĐ
+                </div>
+
+                <p>
+                    Thiết kế năng động, phù hợp giới trẻ hiện đại.
+                </p>
+
+                <button class="btn">
+                    Mua ngay
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+
+    <section class="about">
+
+        <h2>VỀ SHOWROOM</h2>
+
+        <p>
+            Showroom thời trang mang đến những xu hướng mới nhất,
+            kết hợp giữa phong cách hiện đại và sự sang trọng.
+            Chúng tôi luôn cập nhật các bộ sưu tập mới nhằm mang
+            đến trải nghiệm mua sắm đẳng cấp cho khách hàng.
+        </p>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 Fashion Showroom | Hotline: 0123 456 789
+
+    </footer>
+
+</body>
+<script>
+
+function openChat(){
+    document.getElementById("chatBox").style.display = "flex";
+}
+
+function closeChat(){
+    document.getElementById("chatBox").style.display = "none";
+}
+
+/* ENTER ĐỂ GỬI */
+
+document.getElementById("userInput")
+.addEventListener("keypress", function(event){
+
+    if(event.key === "Enter"){
+        sendMessage();
+    }
+
+});
+
+function sendMessage(){
+
+    let input = document.getElementById("userInput");
+    let message = input.value.trim();
+
+    if(message === ""){
+        return;
+    }
+
+    let chatBody = document.getElementById("chatBody");
+
+    /* USER MESSAGE */
+
+    let userDiv = document.createElement("div");
+
+    userDiv.classList.add("user-message");
+
+    userDiv.innerHTML = message;
+
+    chatBody.appendChild(userDiv);
+
+    /* BOT MESSAGE */
+
+    let botDiv = document.createElement("div");
+
+    botDiv.classList.add("bot-message");
+
+    let text = message.toLowerCase();
+
+    let reply = "";
+
+    /* TRẢ LỜI THÔNG MINH */
+
+    if(
+        text.includes("xin chào") ||
+        text.includes("hello") ||
+        text.includes("hi")
+    ){
+        reply = "Xin chào 👋 Fashion rất vui được hỗ trợ bạn.";
+    }
+
+    else if(
+        text.includes("áo")
+    ){
+        reply = "Shop hiện có hoodie, áo luxury và áo oversize mới nhất 🔥";
+    }
+
+    else if(
+        text.includes("quần")
+    ){
+        reply = "Shop có quần jeans, jogger và quần thời trang cao cấp.";
+    }
+
+    else if(
+        text.includes("giày") ||
+        text.includes("sneaker")
+    ){
+        reply = "Shop có nhiều mẫu sneaker và luxury shoes cực hot 👟";
+    }
+
+    else if(
+        text.includes("nữ")
+    ){
+        reply = `
+    <p>Bạn có thể xem thời trang nữ tại showroom 💃</p>
+
+    <a href="nu.html" class="chat-link-btn">
+        Xem thời trang nữ
+    </a>
+`;
+    }
+
+    else if(
+        text.includes("nam")
+    ){
+        reply = `
+    <p>Shop có nhiều outfit nam phong cách hiện đại 😎</p>
+
+    <a href="nam.html" class="chat-link-btn">
+        Xem thời trang nam
+    </a>
+`;
+    }
+
+    else if(
+        text.includes("luxury") ||
+        text.includes("cao cấp")
+    ){
+        reply = `
+    <p>Luxury Collection là dòng sản phẩm cao cấp nhất 👑</p>
+
+    <a href="luxury.html" class="chat-link-btn">
+        Xem Luxury
+    </a>
+`;
+    }
+
+    else if(
+        text.includes("giá") ||
+        text.includes("bao nhiêu")
+    ){
+        reply = "Giá sản phẩm hiện dao động từ 500.000 VNĐ đến 3.000.000 VNĐ.";
+    }
+
+    else if(
+        text.includes("ship") ||
+        text.includes("giao hàng")
+    ){
+        reply = "Shop hỗ trợ giao hàng toàn quốc 🚚";
+    }
+
+    else if(
+        text.includes("đổi trả")
+    ){
+        reply = "Shop hỗ trợ đổi trả trong vòng 7 ngày nếu sản phẩm lỗi.";
+    }
+
+    else if(
+        text.includes("hotline") ||
+        text.includes("số điện thoại")
+    ){
+        reply = "Hotline Fashion Showroom: 0123 456 789 ☎";
+    }
+
+    else if(
+        text.includes("facebook")
+    ){
+        reply = "Facebook: Fashion Showroom Official 💙";
+    }
+
+    else if(
+        text.includes("cảm ơn")
+    ){
+        reply = "Fashion cảm ơn bạn đã ghé thăm showroom ❤️";
+    }
+
+    else{
+        reply = "Xin lỗi, tôi chưa hiểu rõ 😅 Bạn có thể hỏi về sản phẩm, giá, giao hàng hoặc thời trang.";
+    }
+
+    /* DELAY BOT */
+
+    setTimeout(() => {
+
+        botDiv.innerHTML = reply;
+
+        chatBody.appendChild(botDiv);
+
+        chatBody.scrollTop = chatBody.scrollHeight;
+
+    }, 500);
+
+    /* AUTO SCROLL */
+
+    chatBody.scrollTop = chatBody.scrollHeight;
+
+    input.value = "";
+
+}
+
+</script>
+</html>
